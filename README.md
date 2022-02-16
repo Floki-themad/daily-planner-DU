@@ -1,2 +1,29 @@
-# daily-planner-DU
-week 5 homework/ Daily planner. 
+#### daily-planner-DU
+#
+# Overview
+A daily planner built with HTML, CSS, MOMENT.JS, and JAVASCRIPT.  A user is showed a webpage that loads the current date and highlights current hour window. user can input text that'll be saved to the webpage via local storage. 
+
+### User Story
+* AS AN employee with a busy schedule
+* I WANT to add important events to a daily planner
+* SO THAT I can manage my time effectively
+##
+##
+### Acceptance Criteria
+* GIVEN I am using a daily planner to create a schedule
+*  WHEN I open the planner
+* THEN the current day is displayed at the top of the calendar
+* WHEN I scroll down
+* THEN I am presented with timeblocks for standard business hours
+* WHEN I view the timeblocks for that day
+* THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+* WHEN I click into a timeblock
+* THEN I can enter an event
+* WHEN I click the save button for that timeblock
+* THEN the text for that event is saved in local storage
+* WHEN I refresh the page
+* THEN the saved events persist
+
+* [Github Repo](https://github.com/Floki-themad/daily-planner-DU)
+* [Deployed Site](https://floki-themad.github.io/daily-planner-DU/)
+<img src="imgs/Work Day Scheduler.png">
