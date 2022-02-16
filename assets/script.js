@@ -47,6 +47,8 @@ let schedule = [
     },
 ]
 
+
+
 // this function starts on page load
 function init() {
     // this function gets the date and sets it to the current day part of the page
@@ -60,7 +62,7 @@ function init() {
 }
 
 
-// this function gets the current date and applies a format to show on the page.
+// this function gets the current daye and applies a format to show on the page.
 function getTime() {
     currentDay.text(time.format("dddd MMMM Do"))
 }
@@ -79,91 +81,93 @@ function getColor() {
     let box3 = $("#task3")
     let box4 = $("#task4")
     let box5 = $("#task5")
-}
-// the statements below check the current time and applies a class to the text area based on if it is currently that time, or before, or after.
-if (moment().isBefore(moment("9:00", "hour"))) {
-    box9.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("09:00", "hour"))) {
-    box9.addClass("present")
-} else {
-    box9.addClass("past")
-}
 
-if (moment().isBefore(moment("10:00", "hour"))) {
-    box10.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("10:00", "hour"))) {
-    box10.addClass("present")
-} else {
-    box10.addClass("past")
-}
+    // the statements below check the current time and applies a class to the text area based on if it is currently that time, or before, or after.
+    if (moment().isBefore(moment("9:00", "hour"))) {
+        box9.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("09:00", "hour"))) {
+        box9.addClass("present")
+    } else {
+        box9.addClass("past")
+    }
 
-if (moment().isBefore(moment("11:00", "hour"))) {
-    box11.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("11:00", "hour"))) {
-    box11.addClass("present")
-} else {
-    box11.addClass("past")
-}
+    if (moment().isBefore(moment("10:00", "hour"))) {
+        box10.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("10:00", "hour"))) {
+        box10.addClass("present")
+    } else {
+        box10.addClass("past")
+    }
 
-
-if (moment().isBefore(moment("12:00", "hour"))) {
-    box12.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("12:00", "hour"))) {
-    box12.addClass("present")
-} else {
-    box12.addClass("past")
-}
+    if (moment().isBefore(moment("11:00", "hour"))) {
+        box11.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("11:00", "hour"))) {
+        box11.addClass("present")
+    } else {
+        box11.addClass("past")
+    }
 
 
-if (moment().isBefore(moment("13:00", "hour"))) {
-    box1.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("13:00", "hour"))) {
-    box1.addClass("present")
-} else {
-    box1.addClass("past")
-}
+    if (moment().isBefore(moment("12:00", "hour"))) {
+        box12.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("12:00", "hour"))) {
+        box12.addClass("present")
+    } else {
+        box12.addClass("past")
+    }
 
 
-if (moment().isBefore(moment("14:00", "hour"))) {
-    box2.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("14:00", "hour"))) {
-    box2.addClass("present")
-} else {
-    box2.addClass("past")
+    if (moment().isBefore(moment("13:00", "hour"))) {
+        box1.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("13:00", "hour"))) {
+        box1.addClass("present")
+    } else {
+        box1.addClass("past")
+    }
+
+
+    if (moment().isBefore(moment("14:00", "hour"))) {
+        box2.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("14:00", "hour"))) {
+        box2.addClass("present")
+    } else {
+        box2.addClass("past")
+    }
+
+    if (moment().isBefore(moment("15:00", "hour"))) {
+        box3.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("15:00", "hour"))) {
+        box3.addClass("present")
+    } else {
+        box3.addClass("past")
+    }
+
+    if (moment().isBefore(moment("16:00", "hour"))) {
+        box4.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("16:00", "hour"))) {
+        box4.addClass("present")
+    } else {
+        box4.addClass("past")
+    }
+
+    if (moment().isBefore(moment("17:00", "hour"))) {
+        box5.addClass("future")
+    }
+    else if (moment().startOf("hour").isSame(moment("17:00", "hour"))) {
+        box5.addClass("present")
+    } else {
+        box5.addClass("past")
+    }
 }
 
-if (moment().isBefore(moment("15:00", "hour"))) {
-    box3.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("15:00", "hour"))) {
-    box3.addClass("present")
-} else {
-    box3.addClass("past")
-}
-
-if (moment().isBefore(moment("16:00", "hour"))) {
-    box4.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("16:00", "hour"))) {
-    box4.addClass("present")
-} else {
-    box4.addClass("past")
-}
-
-if (moment().isBefore(moment("17:00", "hour"))) {
-    box5.addClass("future")
-}
-else if (moment().startOf("hour").isSame(moment("17:00", "hour"))) {
-    box5.addClass("present")
-} else {
-    box5.addClass("past")
-}
 
 // this function takes the data saved in local storage and sets each textarea to them.
 function loadSave() {
