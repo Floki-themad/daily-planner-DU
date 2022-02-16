@@ -46,3 +46,37 @@ let schedule = [
         taskValue: " ",
     },
 ]
+
+// this function starts on page load
+function init() {
+    // this function gets the date and sets it to the current day part of the page
+    getTime()
+
+    // this function gets the current time of day and applies colors to each time slot depending on if it is the same, before, or after. 
+    getColor()
+
+    // this function takes the tasks stored in local storage and applies them to the corresponding4 textarea
+    loadSave()
+}
+
+
+// this function gets the current date and applies a format to show on the page.
+function getTime() {
+    currentDay.text(time.format("dddd MMMM Do"))
+}
+
+
+// this function applies the color to each time block based on the current time of day. 
+function getColor() {
+
+    // this chunk of code sets each textarea to a uique variable
+    let box9 = $("#task9")
+    let box10 = $("#task10")
+    let box11 = $("#task11")
+    let box12 = $("#task12")
+    let box1 = $("#task1")
+    let box2 = $("#task2")
+    let box3 = $("#task3")
+    let box4 = $("#task4")
+    let box5 = $("#task5")
+}
