@@ -164,4 +164,52 @@ else if (moment().startOf("hour").isSame(moment("17:00", "hour"))) {
 } else {
     box5.addClass("past")
 }
+
+// this function takes the data saved in local storage and sets each textarea to them.
+function loadSave() {
+
+    // the following chuck of code sets each textarea to a unique variable
+    let box9 = $("#task9")
+    let box10 = $("#task10")
+    let box11 = $("#task11")
+    let box12 = $("#task12")
+    let box1 = $("#task1")
+    let box2 = $("#task2")
+    let box3 = $("#task3")
+    let box4 = $("#task4")
+    let box5 = $("#task5")
+
+    // the folloowing chunk of code takes the data saved is local storage and sets each textarea's value to the corresponding data 
+    box9.val(JSON.parse(localStorage.getItem("9")))
+    box10.val(JSON.parse(localStorage.getItem("10")))
+    box11.val(JSON.parse(localStorage.getItem("11")))
+    box12.val(JSON.parse(localStorage.getItem("12")))
+    box1.val(JSON.parse(localStorage.getItem("1")))
+    box2.val(JSON.parse(localStorage.getItem("2")))
+    box3.val(JSON.parse(localStorage.getItem("3")))
+    box4.val(JSON.parse(localStorage.getItem("4")))
+    box5.val(JSON.parse(localStorage.getItem("5")))
 }
+
+// this function is used to save the input of textareas to local storage
+function saveTask(e) {
+
+
+    // this defines the textarea that we will be saving based off of the save button clicked
+    let textBox = $(this).parent(".row").children(".form-inline").children(".form-control-plaintext")
+
+    // this checks the object to see if the task number matches the data id number of the textarea. if it does then the textareas content gets saved into local starage with the task number being the key
+    for (let index = 0; index < schedule.length; index++) {
+        if (schedule[index].taskNumber == textBox.attr("data-id")) {
+            let store = textBox.val().trim()
+            localStorage.setItem(schedule[index].taskNumber, JSON.stringify(store));
+        }
+    }
+
+}
+
+// this calls the saveTask function whenever a button is clicked
+button.on("click", saveTask)
+
+// this calls what functions need to be ran on page load
+init();
